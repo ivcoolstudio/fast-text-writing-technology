@@ -1,0 +1,18 @@
+to start automatic text writing, there are two options 1 option - enter the text speed in the upper line with a fractional value 
+(the lower the value, the faster) and in the lower line of the text you want to write, then you need to press ok and use the shift 
+key and text input will begin 2 option - close 1 window and take a screenshot of the area where the text is located, then restart the 
+program, specify the speed in the first line (you do not need to touch the bottom one), press ok and after using the ctrl key, text 
+input will begin.
+
+-------------------------------------------------------------
+
+pip install tkinter
+pip install keyboard
+pip install sys 
+pip install PyQt5
+pip install ImageGrab
+pip install pytesseract (pytesseract still needs to be installed manually) https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.0.20221222.exe
+
+-------------------------------------------------------------
+don't forget to specify the recognition language in the code that you specified when installing pytesseract (the default is English) Line 17 
+to install the Russian language, you need to specify it there with a comma lang='rus'
