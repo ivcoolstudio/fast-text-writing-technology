@@ -9,7 +9,7 @@ import keyboard as keyb
 #настройки окна Tk
 root = Tk()
 root.title("printscreen")
-root.geometry("400x200+700+500")
+root.geometry("250x300+500+700")
 root.resizable(width=False, height=False)
 #извлечение текста из изображения
 img =Image.open("testpic/testImage.png")
@@ -24,6 +24,13 @@ speed = 1
 value =DoubleVar()
 texstt = 23
 value1 = StringVar()
+
+canvas = Canvas(bg="white", width=250, height=200)
+canvas.pack(anchor=CENTER, expand=1)
+
+python_image = PhotoImage(file="karan.png")
+
+canvas.create_image(10, 10, anchor=NW, image=python_image)
 
 l = Label(text="for more information, read the message in the console")
 o = Entry(textvariable=value1)
