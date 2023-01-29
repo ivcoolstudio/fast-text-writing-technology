@@ -4,6 +4,8 @@ key and text input will begin 2 option - close 1 window and take a screenshot of
 program, specify the speed in the first line (you do not need to touch the bottom one), press ok and after using the ctrl key, text 
 input will begin.
 
+a stripped down version of this program in exe at this link https://drive.google.com/file/d/1zZRT1EKS9_y8Gs_zF8H6klavje_O2gZ_/view?usp=sharing
+
 -------------------------------------------------------------
 
 pip install tkinter
