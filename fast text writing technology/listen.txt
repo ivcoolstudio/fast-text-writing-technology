@@ -16,3 +16,5 @@ pip install pytesseract (pytesseract still needs to be installed manually) https
 -------------------------------------------------------------
 don't forget to specify the recognition language in the code that you specified when installing pytesseract (the default is English) Line 17 
 to install the Russian language, you need to specify it there with a comma lang='rus'
+
+this code can be modified and used for any purpose only with the indication of the author
