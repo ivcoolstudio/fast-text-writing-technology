@@ -28,7 +28,7 @@ value1 = StringVar()
 canvas = Canvas(bg="white", width=250, height=200)
 canvas.pack(anchor=CENTER, expand=1)
 
-python_image = PhotoImage(file="karan.png")
+python_image = PhotoImage(file="karandah.png")
 
 canvas.create_image(10, 10, anchor=NW, image=python_image)
 
