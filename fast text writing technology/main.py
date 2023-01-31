@@ -6,18 +6,19 @@ from PIL import ImageGrab#работа с изображениями
 import pytesseract#нэйросеть для распознавания текста
 from PIL import Image
 import keyboard as keyb
+
 #настройки окна Tk
 root = Tk()
 root.title("printscreen")
-root.geometry("250x300+500+700")
+root.geometry("300x300+100+100")
 root.resizable(width=False, height=False)
 #извлечение текста из изображения
 img =Image.open("testpic/testImage.png")
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-text = pytesseract.image_to_string(img)#выбираем язык и задаем переменную текст
+text = pytesseract.image_to_string(img, lang="rus")#выбираем язык и задаем переменную текст
 #при нажатии на ctrl будет писать то что написано в изображении
-keyb.add_hotkey("ctrl", lambda: keyb.write(text, value.get()))
-keyb.add_hotkey("SHiFT", lambda: keyb.write(value1.get(), value.get()))
+keyb.add_hotkey("SHiFT", lambda: keyb.write(text, value.get()))
+keyb.add_hotkey("8", lambda: keyb.write(value1.get(), value.get()))
 print("to start automatic text writing, there are two options 1 option - enter the text speed in the upper line with a fractional value (the lower the value, the faster) and in the lower line of the text you want to write, then you need to press ok and use the shift key and text input will begin 2 option - close 1 window and take a screenshot of the area where the text is located, then restart the program, specify the speed in the first line (you do not need to touch the bottom one), press ok and after using the ctrl key, text input will begin.")
 #работа с переменными и строками
 speed = 1
@@ -116,9 +117,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.label = QtWidgets.QLabel(alignment=QtCore.Qt.AlignCenter)
         self.button = QtWidgets.QPushButton('Делать скриншот')
         self.button.clicked.connect(self.activateSnipping)
+        self.button = QtWidgets.QPushButton('Делать скриншот')
+        self.button.clicked.connect(self.activateSnipping)
 
         layout = QtWidgets.QVBoxLayout(self.centralWidget)
         layout.addWidget(self.label, 1)
+        layout.addWidget(self.button, 0)
         layout.addWidget(self.button, 0)
 
         self.snipper = SnippingWidget()
