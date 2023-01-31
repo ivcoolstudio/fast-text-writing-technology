@@ -8,7 +8,7 @@ a stripped down version of this program in exe at this link https://drive.google
 
 -------------------------------------------------------------
 
-pip install tkinter
+
 pip install keyboard
 pip install sys 
 pip install PyQt5
