@@ -20,9 +20,7 @@ keyb.add_hotkey("SHiFT", lambda: keyb.write(text, value.get()))
 keyb.add_hotkey("8", lambda: keyb.write(value1.get(), value.get()))
 print("to start automatic text writing, there are two options 1 option - enter the text speed in the upper line with a fractional value (the lower the value, the faster) and in the lower line of the text you want to write, then you need to press ok and use the shift key and text input will begin 2 option - close 1 window and take a screenshot of the area where the text is located, then restart the program, specify the speed in the first line (you do not need to touch the bottom one), press ok and after using the ctrl key, text input will begin.")
 #работа с переменными и строками
-speed = 1
 value =DoubleVar()
-texstt = 23
 value1 = StringVar()
 
 canvas = Canvas(bg="white", width=250, height=200)
