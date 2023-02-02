@@ -1,11 +1,10 @@
 from tkinter import *#работа с окнами
-import keyboard as keyb#клавиатура
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets#работа с окнами и более высоким функционалом
 from PIL import ImageGrab#работа с изображениями
 import pytesseract#нэйросеть для распознавания текста
 from PIL import Image
-import keyboard as keyb
+import keyboard as keyb#библеотека для работы с клавиотурой
 
 #настройки окна Tk
 root = Tk()
