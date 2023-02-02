@@ -13,7 +13,7 @@ root.geometry("300x300+100+100")
 root.resizable(width=False, height=False)
 #извлечение текста из изображения
 img =Image.open("testpic/testImage.png")
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"#сдесь вы должны указать место куда вы установили pytesseract данный путь стоит по умолчанию
 text = pytesseract.image_to_string(img, lang="rus")#выбираем язык и задаем переменную текст
 #при нажатии на ctrl будет писать то что написано в изображении
 keyb.add_hotkey("SHiFT", lambda: keyb.write(text, value.get()))
