@@ -22,14 +22,14 @@ print("to start automatic text writing, there are two options 1 option - enter t
 #работа с переменными и строками
 value =DoubleVar()
 value1 = StringVar()
-
+#создание картинки с логотипом карандаша из изображения karandah.png
 canvas = Canvas(bg="white", width=250, height=200)
 canvas.pack(anchor=CENTER, expand=1)
 
 python_image = PhotoImage(file="karandah.png")
 
 canvas.create_image(10, 10, anchor=NW, image=python_image)
-
+#работа с виджетами окна tk (с полями ввода)
 l = Label(text="for more information, read the message in the console")
 o = Entry(textvariable=value1)
 e = Entry(textvariable=value)
