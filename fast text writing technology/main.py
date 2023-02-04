@@ -13,23 +13,25 @@ root.geometry("300x300+100+100")
 root.resizable(width=False, height=False)
 #извлечение текста из изображения
 img =Image.open("testpic/testImage.png")
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"#сдесь вы должны указать место куда вы установили pytesseract данный путь стоит по умолчанию
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe" #путь к вашему pytesseract
 text = pytesseract.image_to_string(img, lang="rus")#выбираем язык и задаем переменную текст
 #при нажатии на ctrl будет писать то что написано в изображении
 keyb.add_hotkey("SHiFT", lambda: keyb.write(text, value.get()))
-keyb.add_hotkey("ctrl", lambda: keyb.write(value1.get(), value.get()))
+keyb.add_hotkey("8", lambda: keyb.write(value1.get(), value.get()))
 print("to start automatic text writing, there are two options 1 option - enter the text speed in the upper line with a fractional value (the lower the value, the faster) and in the lower line of the text you want to write, then you need to press ok and use the shift key and text input will begin 2 option - close 1 window and take a screenshot of the area where the text is located, then restart the program, specify the speed in the first line (you do not need to touch the bottom one), press ok and after using the ctrl key, text input will begin.")
 #работа с переменными и строками
+speed = 1
 value =DoubleVar()
+texstt = 23
 value1 = StringVar()
-#создание картинки с логотипом карандаша из изображения karandah.png
+
 canvas = Canvas(bg="white", width=250, height=200)
 canvas.pack(anchor=CENTER, expand=1)
 
 python_image = PhotoImage(file="karandah.png")
 
 canvas.create_image(10, 10, anchor=NW, image=python_image)
-#работа с виджетами окна tk (с полями ввода)
+
 l = Label(text="for more information, read the message in the console")
 o = Entry(textvariable=value1)
 e = Entry(textvariable=value)
