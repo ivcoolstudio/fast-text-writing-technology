@@ -1,2 +1,48 @@
 # fast-text-writing-technology
 this code can print text from an image at any speed (it can also print pre-written text)
+
+эта программа нужна для выполнения разлычных махинаций с изображениями.
+Она открывает окно где можно сделать скрин-шот выделенной области и обрабатывает 
+его на наличие текста (формат текста не должен быть слишком маленьким или большим т.к может понизиться точность распознавания текста).
+Текст с изображения сохраняется в переменную и после указания скорости написания с помощью библеотики keyboard может начать печатать.
+Чтобы инициализировать начало работы бота после выше указанных действий нужно нажать горячую клавишу SHIFT.Есть и вторая функция этот
+бот может печатать уже написанный в специальную строку текст (эта строка находиться в самом низу).
+После переменных таких как speed и text (которые вводит сам пользователь) можно инициализировать начало работы бота нажав на клавишу ctrl
+
+в настройках pytesseract нужно указать язык распознавания в коде пример :
+lang="rus" если вы хотите чтобы распознавался английскй язык то не указывайте ничего
+так как он указан по умолчанию
+
+
+
+to start automatic text writing, there are two options 1 option - enter the text speed in the upper line with a fractional value 
+(the lower the value, the faster) and in the lower line of the text you want to write, then you need to press ok and use the shift 
+key and text input will begin 2 option - close 1 window and take a screenshot of the area where the text is located, then restart the 
+program, specify the speed in the first line (you do not need to touch the bottom one), press ok and after using the ctrl key, text 
+input will begin.
+
+a stripped down version of this program in exe at this link https://drive.google.com/file/d/1zZRT1EKS9_y8Gs_zF8H6klavje_O2gZ_/view?usp=sharing
+
+чтобы начать автоматическое написание текста, есть два варианта 1 вариант - введите скорость текста в верхней строке с дробным значением
+(чем меньше значение, тем быстрее) и в нижней строке текст который вы хотите написать, затем вам нужно нажать ok и использовать клавишу
+shift и начнется ввод . 2 вариант - закройте 1 окно и сделайте скриншот области, где находится текст, затем перезапустите
+программу, укажите скорость в первой строке (вам не нужно касаться нижней), нажмите ok и после использования клавиши ctrl
+начнется ввод текста.
+
+урезанная версия этой программы в exe по этой ссылке https://drive.google.com/file/d/1zZRT1EKS9_y8Gs_zF8H6klavje_O2gZ_/view?usp=sharing (эта программа печатает уже введеный текст)
+
+-------------------------------------------------------------
+
+
+pip install keyboard
+pip install sys 
+pip install PyQt5
+pip install ImageGrab
+pip install pytesseract (pytesseract still needs to be installed manually) https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.0.20221222.exe
+
+-------------------------------------------------------------
+don't forget to specify the recognition language in the code that you specified when installing pytesseract (the default is English) Line 17 
+to install the Russian language, you need to specify it there with a comma lang='rus'
+
+this code can be modified and used for any purpose only with the indication of the author
+ссылка на видео инструкцию https://youtu.be/PW_ZMo1Ux8k
