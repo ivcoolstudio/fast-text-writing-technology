@@ -45,4 +45,5 @@ don't forget to specify the recognition language in the code that you specified 
 to install the Russian language, you need to specify it there with a comma lang='rus'
 
 this code can be modified and used for any purpose only with the indication of the author
-ссылка на видео инструкцию https://youtu.be/PW_ZMo1Ux8k
+
+ссылка на видео инструкцию по программе  https://youtu.be/PW_ZMo1Ux8k
